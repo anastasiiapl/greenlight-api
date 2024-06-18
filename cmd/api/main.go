@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"greenlight/anaplo/internal/data"
 	"greenlight/anaplo/internal/mailer"
+	"greenlight/anaplo/internal/vcs"
 	"log/slog"
 	"os"
 	"runtime"
@@ -21,7 +22,7 @@ import (
 )
 
 // Application version number.
-const version = "1.0.0"
+var version = vcs.Version()
 
 // Define a config struct to hold all the configuration settings for application.
 type config struct {
